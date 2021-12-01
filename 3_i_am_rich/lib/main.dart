@@ -9,11 +9,11 @@ void main() {
         appBar: AppBar(
             title: const Text('I Am Rich'),
             backgroundColor: Colors.blueGrey[900]),
-        body: const Center(
+        body: Center(
           child: Image(
-            image: NetworkImage(
-                'https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/dragon-img_ver_1.jpg'),
-          ),
+              image: AssetImage(
+            'assets/images/diamond.png',
+          )),
         ),
       ),
     ),
