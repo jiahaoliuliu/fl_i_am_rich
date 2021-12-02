@@ -9,7 +9,7 @@ void main() {
         appBar: AppBar(
             title: const Text('I Am Rich'),
             backgroundColor: Colors.blueGrey[900]),
-        body: Center(
+        body: const Center(
           child: Image(
               image: AssetImage(
             'assets/images/diamond.png',
