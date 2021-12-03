@@ -15,7 +15,17 @@ void main() {
   );
 }
 
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+  // const DicePage({Key? key}) : super(key: key);
+  //
+  @override
+  _DicePageState createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  int leftDiceNumber = 3;
+  int rightDiceNumber = 5;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -23,16 +33,19 @@ class DicePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Image.asset('images/dice2.png'),
+            child: TextButton(
+              onPressed: () {
+                print('Left button got pressed.');
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
-            flex: 1,
-            child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Image.asset('images/dice3.png'),
+            child: TextButton(
+              onPressed: () {
+                print('Right button got pressed.');
+              },
+              child: Image.asset('images/dice$rightDiceNumber.png'),
             ),
           ),
         ],
