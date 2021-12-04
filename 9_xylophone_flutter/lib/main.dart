@@ -4,6 +4,11 @@ import 'package:flutter/material.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+  void playSound(int number) {
+    final player = AudioCache();
+    player.play('note$number.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,70 +21,56 @@ class XylophoneApp extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Colors.red),
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note1.wav');
+                  playSound(1);
                 },
-                child: null,
               ),
               TextButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.orange),
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note2.wav');
+                  playSound(2);
                 },
-                child: null,
               ),
               TextButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.yellow),
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note3.wav');
+                  playSound(3);
                 },
-                child: null,
               ),
               TextButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.green),
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note4.wav');
+                  playSound(4);
                 },
-                child: null,
               ),
               TextButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.teal),
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note5.wav');
+                  playSound(5);
                 },
-                child: null,
               ),
               TextButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.blue),
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note6.wav');
+                  playSound(6);
                 },
-                child: null,
               ),
               TextButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.purple),
                 ),
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note7.wav');
+                  playSound(7);
                 },
-                child: null,
               ),
             ],
           ),
